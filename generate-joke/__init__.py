@@ -19,10 +19,6 @@ def write_http_response(status, body_dict):
         }
     }
     return json.dumps(return_dict)
-    # return func.HttpResponse(
-    #        json.dumps(return_dict),
-    #        status_code=status
-    #    )
 
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
