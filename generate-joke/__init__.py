@@ -29,7 +29,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         "https://trickters.blob.core.windows.net/jokes/jokes.hdf5", jokesfile)
     textgen = textgenrnn(jokesfile)
     joke = textgen.generate(return_as_list=True)[0]
-    logging.info(f"joke: {joke}")
+    logging.info(f"hello from github action joke: {joke}")
     return write_http_response(
         200,
         {'joke': joke}
